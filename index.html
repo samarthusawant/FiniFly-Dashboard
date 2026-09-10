@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FiniFly | Finance Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h2>Fini<span>Fly</span></h2>
+                <small>Finance Intelligence</small>
+            </div>
+        </div>
+
+        <div class="menu-title">
+            MAIN MENU
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#dashboard" class="nav-link active">
+                <i class="fa-solid fa-grid-2"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#analytics" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Analytics</span>
+            </a>
+
+            <a href="#transactions" class="nav-link">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <span>Transactions</span>
+            </a>
+
+            <a href="#customers" class="nav-link">
+                <i class="fa-solid fa-users"></i>
+                <span>Customers</span>
+            </a>
+
+            <a href="#investments" class="nav-link">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Investments</span>
+            </a>
+
+        </nav>
+
+        <div class="menu-title">
+            COMPANY
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#about" class="nav-link">
+                <i class="fa-solid fa-building"></i>
+                <span>About FiniFly</span>
+            </a>
+
+            <a href="#team" class="nav-link">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Our Team</span>
+            </a>
+
+            <a href="#location" class="nav-link">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Location</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="support-card">
+                <div class="support-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+                    <strong>Need help?</strong>
+                    <p>Talk to our support team.</p>
+                </div>
+
+                <button>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="avatar">
+                    SS
+                </div>
+
+                <div class="user-info">
+                    <strong>Samarth Sawant</strong>
+                    <span>Administrator</span>
+                </div>
+
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-brand">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <strong>Fini<span>Fly</span></strong>
+            </div>
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search transactions, customers..."
+                >
+
+                <span class="shortcut">⌘ K</span>
+
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-button notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+                <button class="icon-button" id="themeToggle">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
+
+                <div class="top-profile">
+
+                    <div class="avatar">
+                        SS
+                    </div>
+
+                    <div>
+                        <strong>Samarth</strong>
+                        <small>Admin</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="page" id="dashboard">
+
+            <div class="welcome-row">
+
+                <div>
+                    <span class="eyebrow">
+                        FINIFLY OVERVIEW
+                    </span>
+
+                    <h1>
+                        Good morning, Samarth 👋
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your financial operations today.
+                    </p>
+                </div>
+
+                <div class="date-selector">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span>
+                        Sep 01 - Sep 10, 2026
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- KPI CARDS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.8%
+                        </span>
+                    </div>
+
+                    <p>Total Revenue</p>
+
+                    <h2>
+                        ₹<span class="counter" data-target="24860000">0</span>
+                    </h2>
+
+                    <small>
+                        Compared with previous month
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.4%
+                        </span>
+
+                    </div>
+
+                    <p>Net Profit</p>
+
+                    <h2>
+                        ₹<span class="counter" data-target="8640000">0</span>
+                    </h2>
+
+                    <small>
+                        Healthy profit margin
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            15.2%
+                        </span>
+
+                    </div>
+
+                    <p>Active Customers</p>
+
+                    <h2>
+                        <span class="counter" data-target="18420">0</span>
+                    </h2>
+
+                    <small>
+                        2,431 new customers this month
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            6.7%
+                        </span>
+
+                    </div>
+
+                    <p>Assets Under Management</p>
+
+                    <h2>
+                        ₹<span class="counter" data-target="186400000">0</span>
+                    </h2>
+
+                    <small>
+                        Across investment products
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHART AREA -->
+
+            <div class="chart-grid">
+
+                <!-- Revenue Chart -->
+
+                <div class="card revenue-card" id="analytics">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Revenue Overview</h3>
+                            <p>Monthly revenue performance</p>
+                        </div>
+
+                        <select id="revenueFilter">
+                            <option>2026</option>
+                            <option>2025</option>
+                            <option>2024</option>
+                        </select>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <!-- Revenue Distribution -->
+
+                <div class="card distribution-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Revenue Distribution</h3>
+                            <p>By business segment</p>
+                        </div>
+
+                        <button class="dots">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="donut-wrapper">
+
+                        <canvas id="revenuePie"></canvas>
+
+                        <div class="donut-center">
+                            <strong>₹24.8Cr</strong>
+                            <span>Total</span>
+                        </div>
+
+                    </div>
+
+                    <div class="legend">
+
+                        <div>
+                            <span class="dot investment"></span>
+                            Investments
+                            <strong>42%</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot lending"></span>
+                            Lending
+                            <strong>28%</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot payments"></span>
+                            Payments
+                            <strong>18%</strong>
+                        </div>
+
+                        <div>
+                            <span class="dot advisory"></span>
+                            Advisory
+                            <strong>12%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECOND CHART ROW -->
+
+            <div class="chart-grid second-row">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Customer Growth</h3>
+                            <p>New customers acquired</p>
+                        </div>
+
+                        <span class="badge">
+                            +15.2%
+                        </span>
+
+                    </div>
+
+                    <div class="chart-container small-chart">
+                        <canvas id="customerChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Portfolio Performance</h3>
+                            <p>Investment portfolio returns</p>
+                        </div>
+
+                        <span class="positive-value">
+                            +18.6%
+                        </span>
+
+                    </div>
+
+                    <div class="portfolio-list">
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-info">
+                                <div class="portfolio-icon">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Large Cap Fund</strong>
+                                    <span>Equity</span>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-value">
+                                <strong>+21.4%</strong>
+                                <span>₹42.6L</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-info">
+                                <div class="portfolio-icon">
+                                    <i class="fa-solid fa-landmark"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Balanced Growth</strong>
+                                    <span>Hybrid</span>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-value">
+                                <strong>+14.8%</strong>
+                                <span>₹31.2L</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-info">
+                                <div class="portfolio-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Debt Secure</strong>
+                                    <span>Fixed Income</span>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-value">
+                                <strong>+8.9%</strong>
+                                <span>₹18.7L</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="portfolio-item">
+
+                            <div class="portfolio-info">
+                                <div class="portfolio-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Global Opportunities</strong>
+                                    <span>International</span>
+                                </div>
+                            </div>
+
+                            <div class="portfolio-value">
+                                <strong>+24.2%</strong>
+                                <span>₹12.4L</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRANSACTIONS -->
+
+            <div class="card transaction-card" id="transactions">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Transactions</h3>
+                        <p>Latest financial activities</p>
+                    </div>
+
+                    <button class="view-all">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Customer</th>
+                                <th>Transaction ID</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="transactionTable">
+
+                            <tr>
+
+                                <td>
+                                    <div class="customer">
+                                        <div class="customer-avatar avatar-one">
+                                            AR
+                                        </div>
+
+                                        <div>
+                                            <strong>Aditya Rao</strong>
+                                            <span>Premium Client</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>#FF-98241</td>
+
+                                <td>
+                                    <span class="type investment-type">
+                                        Investment
+                                    </span>
+                                </td>
+
+                                <td>10 Sep 2026</td>
+
+                                <td class="amount">
+                                    +₹2,40,000
+                                </td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="customer">
+                                        <div class="customer-avatar avatar-two">
+                                            NP
+                                        </div>
+
+                                        <div>
+                                            <strong>Neha Patil</strong>
+                                            <span>Gold Client</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>#FF-98240</td>
+
+                                <td>
+                                    <span class="type withdrawal-type">
+                                        Withdrawal
+                                    </span>
+                                </td>
+
+                                <td>10 Sep 2026</td>
+
+                                <td class="amount negative">
+                                    -₹85,000
+                                </td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="customer">
+                                        <div class="customer-avatar avatar-three">
+                                            VK
+                                        </div>
+
+                                        <div>
+                                            <strong>Vikram Kulkarni</strong>
+                                            <span>Business Client</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>#FF-98239</td>
+
+                                <td>
+                                    <span class="type loan-type">
+                                        Loan
+                                    </span>
+                                </td>
+
+                                <td>09 Sep 2026</td>
+
+                                <td class="amount">
+                                    +₹5,20,000
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="customer">
+                                        <div class="customer-avatar avatar-four">
+                                            PS
+                                        </div>
+
+                                        <div>
+                                            <strong>Priya Shah</strong>
+                                            <span>Premium Client</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>#FF-98238</td>
+
+                                <td>
+                                    <span class="type payment-type">
+                                        Payment
+                                    </span>
+                                </td>
+
+                                <td>09 Sep 2026</td>
+
+                                <td class="amount">
+                                    +₹1,15,000
+                                </td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPANY ABOUT -->
+
+            <section class="about-section" id="about">
+
+                <div class="section-heading">
+                    <span class="eyebrow">OUR STORY</span>
+                    <h2>Building a smarter financial future.</h2>
+                    <p>
+                        FiniFly is a fictional digital financial-services company
+                        created for this dashboard project.
+                    </p>
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-content">
+
+                        <h3>
+                            Finance made simple.
+                        </h3>
+
+                        <p>
+                            FiniFly was imagined in 2018 with a simple idea:
+                            financial services should be easier to understand,
+                            more transparent and accessible through technology.
+                        </p>
+
+                        <p>
+                            From its early days as a small financial advisory
+                            team in Pune, FiniFly evolved into a technology-led
+                            financial platform serving individuals, startups
+                            and growing businesses.
+                        </p>
+
+                        <p>
+                            Today, FiniFly focuses on digital investments,
+                            wealth management, lending solutions, payment
+                            intelligence and financial analytics.
+                        </p>
+
+                        <div class="about-stats">
+
+                            <div>
+                                <strong>2018</strong>
+                                <span>Founded</span>
+                            </div>
+
+                            <div>
+                                <strong>18K+</strong>
+                                <span>Customers</span>
+                            </div>
+
+                            <div>
+                                <strong>₹186Cr+</strong>
+                                <span>Assets Managed</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <div>
+                                <span>2018</span>
+                                <h4>FiniFly Founded</h4>
+                                <p>
+                                    Started as a financial advisory
+                                    company in Pune.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <div>
+                                <span>2020</span>
+                                <h4>Digital Platform Launch</h4>
+                                <p>
+                                    Introduced online investment and
+                                    financial planning tools.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <div>
+                                <span>2023</span>
+                                <h4>10,000 Customer Milestone</h4>
+                                <p>
+                                    Expanded services for individuals
+                                    and growing businesses.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-dot"></div>
+
+                            <div>
+                                <span>2026</span>
+                                <h4>Next Generation Finance</h4>
+                                <p>
+                                    Expanding AI-powered financial
+                                    insights and analytics.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMERS -->
+
+            <section class="extra-section" id="customers">
+
+                <div class="section-heading">
+                    <span class="eyebrow">CUSTOMERS</span>
+                    <h2>Our customer ecosystem</h2>
+                    <p>
+                        A diversified customer base across multiple segments.
+                    </p>
+                </div>
+
+
+                <div class="customer-cards">
+
+                    <div class="customer-segment">
+                        <i class="fa-solid fa-user"></i>
+                        <strong>Retail Investors</strong>
+                        <span>10,840 customers</span>
+                        <b>58.8%</b>
+                    </div>
+
+                    <div class="customer-segment">
+                        <i class="fa-solid fa-rocket"></i>
+                        <strong>Startups</strong>
+                        <span>2,840 customers</span>
+                        <b>15.4%</b>
+                    </div>
+
+                    <div class="customer-segment">
+                        <i class="fa-solid fa-building"></i>
+                        <strong>Businesses</strong>
+                        <span>3,160 customers</span>
+                        <b>17.2%</b>
+                    </div>
+
+                    <div class="customer-segment">
+                        <i class="fa-solid fa-people-group"></i>
+                        <strong>Institutions</strong>
+                        <span>1,580 customers</span>
+                        <b>8.6%</b>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TEAM -->
+
+            <section class="extra-section" id="team">
+
+                <div class="section-heading">
+                    <span class="eyebrow">LEADERSHIP</span>
+                    <h2>The team behind FiniFly</h2>
+                </div>
+
+
+                <div class="team-grid">
+
+                    <div class="team-card">
+                        <div class="team-avatar">AS</div>
+                        <h3>Arjun Shah</h3>
+                        <span>Chief Executive Officer</span>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">MK</div>
+                        <h3>Meera Kulkarni</h3>
+                        <span>Chief Financial Officer</span>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">RV</div>
+                        <h3>Rohan Verma</h3>
+                        <span>Chief Technology Officer</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOCATION -->
+
+            <section class="location-section" id="location">
+
+                <div>
+
+                    <span class="eyebrow">
+                        OUR HEADQUARTERS
+                    </span>
+
+                    <h2>
+                        FiniFly Pune
+                    </h2>
+
+                    <p>
+                        Hinjawadi Business District,<br>
+                        Pune, Maharashtra, India
+                    </p>
+
+                    <div class="location-details">
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Pune, Maharashtra</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>hello@finifly.example</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 20 4000 2026</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="map-card">
+
+                    <div class="map-pattern"></div>
+
+                    <div class="map-pin">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="map-label">
+                        <strong>FiniFly HQ</strong>
+                        <span>Pune, Maharashtra</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer>
+
+                <div>
+                    © 2026 FiniFly. All rights reserved.
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Terms</a>
+                </div>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
